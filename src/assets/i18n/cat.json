@@ -1,0 +1,44 @@
+{
+    "TITLE": "Electricitat Doble",
+    "LOGIN": {
+      "TITLE": "Accés àrea clients",
+      "EMAIL": "Correu electrònic",
+      "PASSWORD": "Contrasenya",
+      "PLACEHOLDER_EMAIL": "exemple@email.com",
+      "PLACEHOLDER_PASSWORD": "Introdueixi la seva contrasenya",
+      "BUTTON": "Accedir",
+      "ERROR_REQUIRED": "Aquest camp és obligatori",
+      "ERROR_EMAIL": "Introdueixi un correu vàlid"
+    },
+    "LOADING": "Carregant...",
+
+    "DASHBOARD": {
+        "TITLE": "Doble Electricitat",
+        "HOME": "Inici",
+        "INVOICE": "Factures",
+        "PROFILE": "Perfil",
+        "LOGOUT": "Sortir"
+    },
+
+    "INVOICE": {
+        "TITLE": "Historial de factures",
+        "NAME": "Nom",
+        "DATE": "Data",
+        "AMOUNT": "Import",
+        "ADDRESS": "Adreça",
+        "DOWNLOAD": "Descarregar",
+        "PDF": "Descarregar PDF"
+    },
+
+    "PROFILE": {
+        "TITLE": "Dades personals",
+        "NAME": "Nom",
+        "MAIL": "Correu electrònic",
+        "DATE": "Data d'alta",
+        "ADDRESS": "Adreça d'enviament",
+        "EDIT": "Editar",
+        "SAVE": "Desar",
+        "CANCEL": "Cancel·lar"
+    }
+  }
+  

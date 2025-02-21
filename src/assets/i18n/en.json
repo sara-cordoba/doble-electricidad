@@ -1,0 +1,48 @@
+{
+    "TITLE": "Double Electricity",
+  
+    "LOGIN": {
+      "SECTION": "🔹 LOGIN PAGE",
+      "TITLE": "Client Area Access",
+      "EMAIL": "Email",
+      "PASSWORD": "Password",
+      "PLACEHOLDER_EMAIL": "example@email.com",
+      "PLACEHOLDER_PASSWORD": "Enter your password",
+      "BUTTON": "Login",
+      "ERROR_REQUIRED": "This field is required",
+      "ERROR_EMAIL": "Enter a valid email"
+    },
+    "LOADING": "Loading...",
+
+    "DASHBOARD": {
+        "TITLE": "Double Electricity",
+        "HOME": "Home",
+        "INVOICE": "Invoices",
+        "PROFILE": "Profile",
+        "LOGOUT": "Logout"
+    },
+
+    "INVOICE": {
+        "TITLE": "Invoice History",
+        "NAME": "Name",
+        "DATE": "Date",
+        "AMOUNT": "Amount",
+        "ADDRESS": "Address",
+        "DOWNLOAD": "Download",
+        "PDF": "Download PDF"
+    },
+
+    "PROFILE": {
+        "TITLE": "Personal Data",
+        "NAME": "Name",
+        "MAIL": "Email",
+        "DATE": "Registration Date",
+        "ADDRESS": "Shipping Address",
+        "EDIT": "Edit",
+        "SAVE": "Save",
+        "CANCEL": "Cancel"
+    }
+
+
+  }
+  

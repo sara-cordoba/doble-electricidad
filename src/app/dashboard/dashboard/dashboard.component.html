@@ -1,0 +1,19 @@
+<mat-toolbar color="primary">
+    <a class="title" routerLink="/dashboard">{{ 'DASHBOARD.TITLE' | translate }}</a>
+    <span class="spacer"></span>
+    <!-- Menú -->
+    <div class="nav-links"> 
+        <a mat-button routerLink="/dashboard"  routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">{{ 'DASHBOARD.HOME' | translate }}</a>
+        <a mat-button routerLink="invoice"  routerLinkActive="active-link">{{ 'DASHBOARD.INVOICE' | translate }}</a>
+        <a mat-button routerLink="profile"  routerLinkActive="active-link">{{ 'DASHBOARD.PROFILE' | translate }}</a> 
+        <!-- Botón de logout -->
+        <button mat-button color="warn" class="logout-button" (click)="logout()">{{ 'DASHBOARD.LOGOUT' | translate }}</button> 
+    </div>
+</mat-toolbar>
+
+<!-- Muestra gráficos solo en la página principal -->
+<div *ngIf="isDashboardRoute()" class="chart-container">
+    <app-chart></app-chart>
+</div>
+
+<router-outlet />

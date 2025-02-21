@@ -1,0 +1,43 @@
+// Estilos graficos ApexCharts
+.charts-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  gap: 30px;
+  padding: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.charts-container > div {
+  width: 100%;
+  max-width: 400px;
+
+  apx-chart {
+    width: 100%;
+    max-width: none;
+    height: 400px;
+  }
+}
+
+// Modo tablet
+@media (max-width: 1024px) {
+  .charts-container {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .charts-container > div {
+    width: 650px;
+    justify-content: center;
+  }
+}
+
+// Modo movil
+@media (max-width: 768px) {
+  .charts-container > div {
+    width: 100%;
+    min-width: 200px;
+  }
+}

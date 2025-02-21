@@ -1,0 +1,25 @@
+<div class="charts-container">
+  
+    <!-- Grafico de consumo de energía mensual (red eléctrica) -->
+    <div *ngIf="chartOptions1 && chartOptions1.chart && chartOptions1.series">
+      <apx-chart
+        [series]="chartOptions1.series"
+        [chart]="chartOptions1.chart"
+        [xaxis]="chartOptions1.xaxis || {}"
+        [title]="chartOptions1.title || {}"
+        [stroke]="chartOptions1.stroke || {}"
+      ></apx-chart>
+    </div>
+
+    <!-- Grafico de producción de energía mensual (placas) -->
+    <div *ngIf="chartOptions2 && chartOptions2.chart && chartOptions2.series">
+      <apx-chart
+        [series]="chartOptions2.series"
+        [chart]="chartOptions2.chart"
+        [xaxis]="chartOptions2.xaxis || {}"
+        [title]="chartOptions2.title || {}"
+        [colors]="chartOptions2.colors || []"
+      ></apx-chart>
+    </div>
+  </div>
+  

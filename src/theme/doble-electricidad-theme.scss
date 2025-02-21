@@ -1,0 +1,54 @@
+@use "@angular/material" as mat;
+
+@include mat.core();
+
+// Paleta de colores personalizada
+$doble-electricidad-palette: (
+  50: #ebf2ff,
+  100: #c9dcf7,
+  200: #a7c7ef,
+  300: #85b1e7,
+  400: #6a9be2,
+  500: #81a4ed,
+  // Color primario
+  600: #5d7ec6,
+  700: #4b66ac,
+  800: #395093,
+  900: #26387a,
+  A100: #b2c8ff,
+  A200: #809fff,
+  A400: #4f76ff,
+  A700: #3e5dff,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #ffffff,
+    A400: #ffffff,
+    A700: #ffffff,
+  ),
+);
+
+$primary: mat.m2-define-palette($doble-electricidad-palette);
+$accent: mat.m2-define-palette(mat.$m2-amber-palette, A200, A100, A400);
+$warn: mat.m2-define-palette(mat.$m2-red-palette);
+
+$doble-electricidad-theme: mat.m2-define-light-theme(
+  (
+    color: (
+      primary: $primary,
+      accent: $accent,
+      warn: $warn,
+    ),
+  )
+);
+
+@include mat.all-component-themes($doble-electricidad-theme);

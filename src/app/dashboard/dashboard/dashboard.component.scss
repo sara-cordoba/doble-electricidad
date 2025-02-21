@@ -1,0 +1,79 @@
+// Estilos para el contenedor principal
+:host {
+  height: 1000px;
+  background-color: var(--background-color);
+}
+
+mat-toolbar {
+  background-color: #526a9a;
+}
+
+// Título
+.title {
+  font-size: 24px;
+  font-weight: 500;
+  font-family: "Courier New", Courier, monospace;
+  margin-left: 32px;
+  text-decoration: none;
+}
+
+// Espaciador
+.spacer {
+  flex: 1;
+}
+
+// Enlaces de navegación
+.nav-links {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  color: white;
+  height: 60px;
+  gap: 48px;
+  margin-right: 32px;
+}
+
+a {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+
+  &:hover {
+    text-decoration: none;
+    color: #a6c1f5;
+  }
+}
+
+// Estilos para los enlaces activos
+.active-link {
+  color: #a6c1f5 !important;
+  font-weight: 400;
+  border-bottom: 2px solid #a6c1f5;
+}
+
+// Estilos para el selector de idiomas
+.logout-button {
+  font-weight: bold;
+  color: white;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #a6c1f5;
+  }
+}
+
+// Estilos para el contenedor de los gráficos
+.chart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}

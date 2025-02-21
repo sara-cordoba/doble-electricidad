@@ -1,0 +1,45 @@
+{
+    "TITLE": "Doble Electricidad",
+
+  "LOGIN": {
+    "SECTION": "LOGIN PAGE",
+    "TITLE": "Acceso área clientes",
+    "EMAIL": "Correo electrónico",
+    "PASSWORD": "Contraseña",
+    "PLACEHOLDER_EMAIL": "ejemplo@email.com",
+    "PLACEHOLDER_PASSWORD": "Ingrese su contraseña",
+    "BUTTON": "Acceder",
+    "ERROR_REQUIRED": "Este campo es obligatorio",
+    "ERROR_EMAIL": "Ingrese un correo válido"
+},
+"LOADING": "Cargando...",
+
+    "DASHBOARD": {
+        "TITLE":"Doble Electricidad",
+        "HOME": "Inicio",
+        "INVOICE": "Facturas",
+        "PROFILE": "Perfil",
+        "LOGOUT": "Salir"
+    },
+
+    "INVOICE": {
+        "TITLE": "Historial de facturas",
+        "NAME": "Nombre",   
+        "DATE": "Fecha",
+        "AMOUNT": "Importe",
+        "ADDRESS": "Dirección",
+        "DOWNLOAD": "Descargar",
+        "PDF": "Descargar PDF"
+    },
+
+    "PROFILE": {
+        "TITLE": "Datos personales",
+        "NAME": "Nombre",
+        "MAIL": "Correo electrónico",
+        "DATE": "Fecha de alta",
+        "ADDRESS": "Dirección de envío",
+        "EDIT": "Editar",
+        "SAVE": "Guardar",
+        "CANCEL": "Cancelar"
+    }
+}

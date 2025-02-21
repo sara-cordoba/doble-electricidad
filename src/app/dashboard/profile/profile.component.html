@@ -1,0 +1,54 @@
+<div class="profile-container">
+  <h2 class="profile-title">{{ 'PROFILE.TITLE' | translate }}</h2>
+
+  <form [formGroup]="profileForm">
+    <!-- Campos del perfil reutilizables -->
+    <app-profile-field
+      [label]="'PROFILE.NAME' | translate"
+      fieldName="name"
+      [isEditable]="true"
+      [isEditing]="editing">
+    </app-profile-field>
+
+    <app-profile-field
+      [label]="'PROFILE.MAIL' | translate"
+      fieldName="email"
+      [isEditable]="true"
+      [isEditing]="editing">
+    </app-profile-field>
+
+    <app-profile-field
+      [label]="'PROFILE.DATE' | translate"
+      fieldName="joinDate"
+      [isEditable]="false"
+      [isEditing]="false">
+    </app-profile-field>
+
+    <app-profile-field
+      [label]="'PROFILE.ADDRESS' | translate"
+      fieldName="address"
+      [isEditable]="true"
+      [isEditing]="editing">
+    </app-profile-field>
+  </form>
+
+  <div class="button-group">
+    <!-- Si no estamos en modo edición se muestra el botón Editar -->
+    <button
+      *ngIf="!editing"
+      mat-button
+      color="accent"
+      (click)="startEditing()">
+      {{ 'PROFILE.EDIT' | translate }}
+    </button>
+    <!-- Si estamos en modo edición se muestran Guardar y Cancelar -->
+    <ng-container *ngIf="editing">
+      <button mat-button color="accent" (click)="saveChanges()">
+        {{ 'PROFILE.SAVE' | translate }}
+      </button>
+      <button mat-button color="warn" (click)="cancelEditing()">
+        {{ 'PROFILE.CANCEL' | translate }}
+      </button>
+    </ng-container>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="profile-field">
+  <label>{{ label }}</label>
+  <div class="editable-field">
+    <!-- Si el campo es editable y el modo edición está activo, se muestra el input -->
+    <ng-container *ngIf="isEditable && isEditing; else viewMode">
+      <input matInput [formControlName]="fieldName">
+    </ng-container>
+    <!-- Muestra el valor actual -->
+    <ng-template #viewMode>
+      <span>{{ formGroup.get(fieldName)?.value }}</span>
+    </ng-template>
+  </div>
+</div>

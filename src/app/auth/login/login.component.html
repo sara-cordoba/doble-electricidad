@@ -1,0 +1,73 @@
+<!-- ACCESO LOGIN:
+     CORREO: admin@ejemplo.com
+     CONTRASEÑA: 123456
+-->
+
+<div class="login-container">
+
+    <!-- Logo -->
+    <div class="logo">
+        <img src="assets/img/logo-dobleelectricidad2_sharp.png" alt="logo">
+    </div>
+
+    <!-- Pantalla de carga -->
+    <div *ngIf="isLoading; else loginFormTemplate" class="loading-screen">
+        <div class="spinner"></div>
+        <p>{{ 'LOADING' | translate }}</p>
+    </div>
+
+    <!-- Formulario de login -->
+    <ng-template #loginFormTemplate>
+        <mat-card class="login-form" appearance="outlined">
+            <mat-card-title class="login-title">{{ 'LOGIN.TITLE' | translate }}</mat-card-title>
+            <mat-card-content>
+                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                    <!-- Campo de correo -->
+                    <mat-form-field class="full-width">
+                        <mat-label>{{ 'LOGIN.EMAIL' | translate }}</mat-label>
+                        <input matInput [placeholder]="'LOGIN.PLACEHOLDER_EMAIL' | translate" formControlName="email" type="email">
+                        <mat-error *ngIf="loginForm.get('email')?.hasError('required')">
+                            {{ 'LOGIN.ERROR_REQUIRED' | translate }}
+                        </mat-error>
+                        <mat-error *ngIf="loginForm.get('email')?.hasError('email')">
+                            {{ 'LOGIN.ERROR_EMAIL' | translate }}
+                        </mat-error>
+                    </mat-form-field>
+
+                    <!-- Campo de contraseña -->
+                    <mat-form-field class="full-width">
+                        <mat-label>{{ 'LOGIN.PASSWORD' | translate }}</mat-label>
+                        <input 
+                            matInput 
+                            [placeholder]="'LOGIN.PLACEHOLDER_PASSWORD' | translate"
+                            formControlName="password" 
+                            [type]="showPassword ? 'text' : 'password'"
+                            autocomplete="off"
+                        >
+                        <!-- Botón para mostrar/ocultar la contraseña -->
+                        <button mat-icon-button matSuffix type="button" (click)="toggleShowPassword()">
+                            <mat-icon>{{ showPassword ? 'visibility_off' : 'visibility' }}</mat-icon>
+                        </button>
+                        <mat-error *ngIf="loginForm.get('password')?.hasError('required')">
+                            {{ 'LOGIN.ERROR_REQUIRED' | translate }}
+                        </mat-error>
+                    </mat-form-field>
+
+                    <!-- Mensaje de error --> 
+                    <p *ngIf="loginError" class="error-message">{{ 'LOGIN.ERROR_INVALID_CREDENTIALS' | translate }}</p>
+
+                    <!-- Botón de login -->
+                    <button mat-raised-button color="primary" type="submit" [disabled]="loginForm.invalid">
+                        {{ 'LOGIN.BUTTON' | translate }}
+                    </button>
+                </form>
+            </mat-card-content>
+        </mat-card> 
+
+        <!-- Información de acceso -->
+        <div class="login-info">
+            <div>Correo: admin&#64;ejemplo.com</div>
+            <div>Contraseña: 123456</div> 
+        </div>
+    </ng-template>
+</div>
